@@ -12,8 +12,8 @@
             margin: 20px auto;
             background-color: #f4f4f4;
             display: block;
-            width: 300px;
-            height: 300px;
+            width: 500px;
+            height: 500px;
         }
     </style>
 </head>
@@ -74,12 +74,14 @@
         let food = generateFood();
         let score = 0;
 
-        canvas.width = 300;
-        canvas.height = 300;
+        // Aumentando o tamanho do canvas
+        canvas.width = 500;
+        canvas.height = 500;
 
+        // Função principal de loop do jogo
         function gameLoop() {
             requestAnimationFrame(gameLoop);
-            if (++count < 4) return;
+            if (++count < 8) return; // Diminuindo a velocidade aumentando o valor de count
             count = 0;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -90,6 +92,7 @@
             drawScore();
         }
 
+        // Movimento da cobrinha
         function moveSnake() {
             const head = {...snake[0]};
             if (direction === 'LEFT') head.x -= grid;
@@ -106,6 +109,7 @@
             }
         }
 
+        // Checando colisões
         function checkCollisions() {
             const head = snake[0];
             if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height) {
@@ -118,6 +122,7 @@
             }
         }
 
+        // Reiniciar o jogo
         function resetGame() {
             snake = [{x: 50, y: 50}];
             direction = 'RIGHT';
@@ -125,12 +130,14 @@
             food = generateFood();
         }
 
+        // Gerar a comida
         function generateFood() {
             const x = Math.floor(Math.random() * (canvas.width / grid)) * grid;
             const y = Math.floor(Math.random() * (canvas.height / grid)) * grid;
             return {x, y};
         }
 
+        // Desenhar a cobrinha
         function drawSnake() {
             snake.forEach((segment, index) => {
                 ctx.fillStyle = index === 0 ? 'green' : 'lightgreen';
@@ -138,17 +145,20 @@
             });
         }
 
+        // Desenhar a comida
         function drawFood() {
             ctx.fillStyle = 'red';
             ctx.fillRect(food.x, food.y, grid, grid);
         }
 
+        // Desenhar a pontuação
         function drawScore() {
             ctx.fillStyle = 'black';
             ctx.font = '16px Arial';
             ctx.fillText('Score: ' + score, 10, canvas.height - 10);
         }
 
+        // Controlar a direção
         function changeDirection(event) {
             if (event.keyCode === 37 && direction !== 'RIGHT') direction = 'LEFT';
             if (event.keyCode === 38 && direction !== 'DOWN') direction = 'UP';
