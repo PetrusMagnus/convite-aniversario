@@ -4,23 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite para Festa de Aniversário</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos CSS -->
     <style>
-        /* Adicionando estilo para o jogo da cobrinha */
-        #snake-game {
-            border: 2px solid #007bff;
+        /* Estilos gerais do site */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+
+        #informacoes, #presentes, #jogo-cobrinha {
+            padding: 20px;
             margin: 20px auto;
-            background-color: #f4f4f4;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        #snake-game {
+            margin: 20px auto;
+            background-color: #fafafa;
             display: block;
             width: 500px;
             height: 500px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo para o botão */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Convite para a Festa de Aniversário de Pedro</h1>
-        <p>Venha celebrar comigo no dia **14 de dezembro de 2024**!</p>
+        <p>Venha celebrar comigo no dia <strong>14 de dezembro de 2024</strong>!</p>
     </header>
 
     <section id="informacoes">
@@ -31,27 +93,14 @@
         <p><strong>Vestimenta:</strong> Camisa social de manga longa e calça preta. Todos devem vir de social!</p>
     </section>
 
-    <section id="confirmacao">
-        <h2>Confirme sua presença</h2>
-        <p>Por favor, confirme sua presença para a festa. Lembre-se de que todos devem vir de camisa social de manga longa e calça preta!</p>
-
-        <!-- Formulário com Netlify Forms -->
-        <form name="confirmacao" method="POST" data-netlify="true">
-            <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-
-            <label for="presenca">Confirmar Presença:</label>
-            <select id="presenca" name="presenca" required>
-                <option value="">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-            </select>
-
-            <label for="mensagem">Mensagem para o Aniversariante:</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem..." rows="4"></textarea>
-
-            <button type="submit">Confirmar Presença</button>
-        </form>
+    <section id="presentes">
+        <h2>Sugestões de Presentes</h2>
+        <ul>
+            <li><strong>Livros teológicos, filosóficos ou épicos:</strong> "A República" de Platão, "O Príncipe" de Maquiavel, "Homero", "O Hobbit" de J.R.R. Tolkien.</li>
+            <li><strong>Camisas sociais e calças elegantes.</strong></li>
+            <li><strong>Sapatos de boa qualidade.</strong></li>
+            <li><strong>PIX:</strong> 61 98128-8689 (Seu número para contribuição)</li>
+        </ul>
     </section>
 
     <section id="jogo-cobrinha">
