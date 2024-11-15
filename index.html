@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Aniversário - Pedro Lima Guedes</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Convite para Festa de Aniversário</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos CSS (se você tiver) -->
 </head>
 <body>
     <header>
-        <h1>Convite de Aniversário - Pedro Lima Guedes</h1>
-        <p>Templários, está na hora de confirmar presença!</p>
+        <h1>Convite para a Festa de Aniversário de Pedro</h1>
+        <p>Venha celebrar comigo no dia **14 de dezembro de 2024**!</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#confirmacao">Confirmar Presença</a></li>
-            <li><a href="#presentes">Ideias de Presentes</a></li>
-        </ul>
-    </nav>
+    <section id="informacoes">
+        <h2>Informações Importantes</h2>
+        <p><strong>Data:</strong> 14 de dezembro de 2024</p>
+        <p><strong>Hora:</strong> das 15h às 21h30</p>
+        <p><strong>Local:</strong> Minha casa (endereço aqui)</p>
+        <p><strong>Vestimenta:</strong> Camisa social de manga longa e calça preta. Todos devem vir de social!</p>
+    </section>
 
     <section id="confirmacao">
         <h2>Confirme sua presença</h2>
-        <p>Por favor, confirme sua presença na festa do Pedro, que será no dia **14 de dezembro de 2024**. Todos devem vir de camisa social de manga longa e calça preta.</p>
-        <form id="confirmForm">
+        <p>Por favor, confirme sua presença para a festa. Lembre-se de que todos devem vir de camisa social de manga longa e calça preta!</p>
+
+        <!-- Formulário com netlify forms -->
+        <form name="confirmacao" method="POST" data-netlify="true">
             <label for="nome">Seu Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
@@ -40,20 +43,8 @@
         </form>
     </section>
 
-    <section id="presentes">
-        <h2>Ideias de Presentes</h2>
-        <ul>
-            <li>Livros sobre filosofia</li>
-            <li>Itens de decoração medieval</li>
-            <li>Jogos de tabuleiro</li>
-            <li>Roupas ou acessórios temáticos</li>
-        </ul>
-    </section>
-
     <footer>
-        <p>Festa marcada para o dia 14 de Dezembro, 2024. Não perca!</p>
+        <p>Se tiver dúvidas, entre em contato comigo! Espero ver todos lá!</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
