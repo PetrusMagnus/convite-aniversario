@@ -1,1 +1,73 @@
+/* Estilos gerais do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+#informacoes, #presentes, #jogo-cobrinha {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+p {
+    line-height: 1.6;
+}
+
+#snake-game {
+    margin: 20px auto;
+    background-color: #fafafa;
+    display: block;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 
