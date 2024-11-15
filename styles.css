@@ -19,7 +19,7 @@ h1 {
     margin-bottom: 0;
 }
 
-#informacoes, #presentes, #jogo-cobrinha {
+#informacoes, #presentes, #jogo-cobrinha, #agradecimento {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -71,3 +71,19 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Estilos adicionais */
+#agradecimento {
+    background-color: #f1f8e9;
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#agradecimento h2 {
+    color: #2e7d32;
+}
+
+#agradecimento p {
+    font-style: italic;
+    font-size: 18px;
+}
