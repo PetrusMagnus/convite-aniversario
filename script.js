@@ -46,9 +46,11 @@ function moveSnake() {
 // Checando colisões
 function checkCollisions() {
     const head = snake[0];
+    // Colisão com as bordas
     if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height) {
         resetGame();
     }
+    // Colisão com a própria cobra
     for (let i = 1; i < snake.length; i++) {
         if (head.x === snake[i].x && head.y === snake[i].y) {
             resetGame();
